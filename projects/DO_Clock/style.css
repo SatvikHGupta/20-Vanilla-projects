@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    transition: background-color 0.5s ease;
+}
+
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.clock {
+    display: flex;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333333;
+}
+
+.digit {
+    display: inline-block;
+    min-width: 2.5rem;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.separator {
+    margin: 0 0.5rem;
+    color: #666666;
+}
+
+.theme-toggle {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #333333;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light {
+    background-color: #f0f0f0;
+}
+
+body.light .clock-container {
+    background-color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+body.light .clock {
+    color: #333333;
+}
+
+body.light .separator {
+    color: #666666;
+}
+
+body.light .theme-toggle {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark {
+    background-color: #121212;
+}
+
+body.dark .clock-container {
+    background-color: #1f1f1f;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+body.dark .clock {
+    color: #ffffff;
+}
+
+body.dark .separator {
+    color: #aaaaaa;
+}
+
+body.dark .theme-toggle {
+    background-color: #ffffff;
+    color: #121212;
+}

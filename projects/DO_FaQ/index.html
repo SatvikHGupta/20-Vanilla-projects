@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="faq" aria-label="Frequently Asked Questions">
+    <h1 class="faq-title">Frequently Asked Questions</h1>
+
+    <section class="faq-item">
+      <button class="question" aria-expanded="false" aria-controls="answer1" id="q1">
+        What is HTML?
+      </button>
+      <div class="answer" id="answer1" role="region" aria-labelledby="q1">
+        HTML stands for HyperText Markup Language.
+      </div>
+    </section>
+
+    <section class="faq-item">
+      <button class="question" aria-expanded="false" aria-controls="answer2" id="q2">
+        What is CSS?
+      </button>
+      <div class="answer" id="answer2" role="region" aria-labelledby="q2">
+        CSS is used to style HTML content.
+      </div>
+    </section>
+
+    <section class="faq-item">
+      <button class="question" aria-expanded="false" aria-controls="answer3" id="q3">
+        What is JavaScript?
+      </button>
+      <div class="answer" id="answer3" role="region" aria-labelledby="q3">
+        JavaScript makes web pages interactive.
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

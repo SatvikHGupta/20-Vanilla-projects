@@ -1,0 +1,133 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298, #3b6aa0, #4a7eb5);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #f0f0f0;
+}
+
+
+h1 {
+  margin: 20px 0;
+  font-size: 2.2rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.column {
+  background: #fefefe;
+  padding: 20px;
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.column:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.column h2 {
+  margin-bottom: 12px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.tasks {
+  min-height: 150px;
+  background: #e8f1fa;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: background 0.3s ease;
+}
+
+.tasks.drag-over {
+  background: #d0e8ff; 
+}
+
+.task {
+  background: #ffffff;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: grab;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+
+.task:active {
+  cursor: grabbing;
+}
+
+.task.dragging {
+  opacity: 0.7;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.input-area {
+  display: flex;
+  gap: 8px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.5);
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #4a90e2;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #357ABD;
+  transform: scale(1.05);
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.delete-btn:hover {
+  color: #c0392b;
+  transform: scale(1.3);
+}

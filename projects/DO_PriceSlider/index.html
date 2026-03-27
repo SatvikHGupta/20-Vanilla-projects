@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Pricing Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pricing-container">
+        <h1>Select Your Plan</h1>
+        <input type="range" min="1" max="3" value="1" id="planSlider">
+        <div class="plans">
+            <span id="plan1">Basic</span>
+            <span id="plan2">Standard</span>
+            <span id="plan3">Premium</span>
+        </div>
+        <div class="billing-toggle">
+            <span>Monthly</span>
+            <input type="checkbox" id="billingToggle">
+            <span>Yearly</span>
+        </div>
+        <div class="price-display">
+            <span id="price">$10</span><span class="duration">/month</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

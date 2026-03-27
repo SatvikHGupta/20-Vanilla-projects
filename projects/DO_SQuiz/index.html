@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Animated Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="app-header">
+      <div class="brand">
+        <h1 class="title">QuickQuiz</h1>
+        <p class="subtitle">Fast. Animated. Accessible.</p>
+      </div>
+      <div class="controls">
+        <button id="themeToggle" class="icon-btn" aria-pressed="false" aria-label="Toggle theme">
+          <span id="themeIcon">Dark</span>
+        </button>
+        <button id="resetBtn" class="ghost-btn" aria-label="Reset quiz">Reset</button>
+      </div>
+    </header>
+
+    <main class="quiz-wrapper" id="quizWrapper" aria-live="polite">
+      <section class="card" id="card" role="application" aria-labelledby="questionText">
+        <div class="progress">
+          <div class="progress-bar" id="progressBar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+        </div>
+
+        <div class="stage">
+          <div class="meta">
+            <span class="q-index" id="qIndex">Question 1</span>
+            <span class="score" id="score">Score: 0</span>
+          </div>
+
+          <h2 id="questionText" class="question">Question text</h2>
+
+          <form id="choicesForm" class="choices" role="list" aria-label="Answer choices">
+            <button type="button" class="choice" data-index="0" role="listitem"></button>
+            <button type="button" class="choice" data-index="1" role="listitem"></button>
+            <button type="button" class="choice" data-index="2" role="listitem"></button>
+            <button type="button" class="choice" data-index="3" role="listitem"></button>
+          </form>
+
+          <div class="actions">
+            <button id="prevBtn" class="ghost-btn" disabled>Prev</button>
+            <button id="nextBtn" class="primary-btn" disabled>Next</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p class="attribution"></p>
+    </footer>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

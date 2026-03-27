@@ -1,0 +1,174 @@
+:root {
+  --bg: #0b1220;
+  --txt: #e6f0fb;
+  --title: #e6f0fb;
+  --accent: #6ea8fe;
+  --radius: 12px;
+  --transition: 300ms ease;
+  --note-shadow: rgba(0,0,0,0.35);
+  --note-colors: #fef68a,#ffadad,#ffd6a5,#caffbf,#9bf6ff,#a0c4ff,#bdb2ff,#ffc6ff;
+}
+
+:root[data-theme="light"] {
+  --bg: #f6f8fb;
+  --txt: #0b1220;
+  --title: #0b1220;
+  --accent: #2563eb;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: var(--bg);
+  color: var(--txt);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  transition: background var(--transition), color var(--transition);
+}
+
+.app {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--title);
+  transition: color var(--transition);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: none;
+  background: var(--accent);
+  color: #000; /* Always readable */
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.board {
+  position: relative;
+  min-height: 60vh;
+}
+
+.note {
+  position: absolute;
+  width: 200px;
+  min-height: 180px;
+  border-radius: var(--radius);
+  padding: 12px;
+  box-shadow: 0 8px 24px var(--note-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: rotate(var(--rotate, 0deg));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 500;
+}
+
+.note:hover {
+  transform: scale(1.05) rotate(var(--rotate, 0deg));
+  box-shadow: 0 12px 36px var(--note-shadow);
+}
+
+.note:active {
+  transform: scale(1.1) rotate(var(--rotate, 0deg));
+}
+
+.note textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  resize: none;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #000; /* Always black text */
+  outline: none;
+  padding-left: 16px; /* space for drag handle */
+}
+
+.note .deleteBtn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  border: none;
+  background: rgba(0,0,0,0.2);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
+}
+
+.note .deleteBtn:hover {
+  background: rgba(0,0,0,0.4);
+}
+
+/* Drag handle */
+.dragHandle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 100%;
+  cursor: grab;
+  background: rgba(0,0,0,0.1);
+  border-top-left-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dragHandle::before {
+  content: "⋮";
+  color: #000;
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.dragHandle:hover {
+  background: rgba(0,0,0,0.2);
+}
+
+.dragHandle:active {
+  cursor: grabbing;
+}
+
+@media (max-width: 600px) {
+  .note { width: 45%; }
+}

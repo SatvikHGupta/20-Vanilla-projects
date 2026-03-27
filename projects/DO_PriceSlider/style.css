@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:darkgray;
+    font-family: Arial, sans-serif;
+}
+
+.pricing-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 300px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input[type=range] {
+    width: 100%;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.plans {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #666;
+}
+
+.plans span {
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.plans span.active {
+    color: #333;
+    transform: scale(1.2);
+}
+
+.billing-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.price-display {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.duration {
+    font-size: 1rem;
+    color: #666;
+    margin-left: 5px;
+    transition: all 0.3s ease;
+}

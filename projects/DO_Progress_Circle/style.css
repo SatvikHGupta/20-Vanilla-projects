@@ -1,0 +1,47 @@
+:root {
+  --bg: #0d0f14;
+  --panel: #141821;
+  --text: #e6e6e9;
+  --acc: #7dd3fc;
+  --acc2: #a78bfa;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: var(--panel);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.circle-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--acc2);
+  cursor: pointer;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satvik Hemant Gupta | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header class="nav">
+    <div class="brand">Satvik Hemant Gupta</div>
+    <nav class="links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <button id="resumeBtn">Resume</button>
+      <a href="#contact">Contact</a>
+      <button id="themeToggle">Toggle Theme</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <h1>Hi, I'm Satvik Hemant Gupta</h1>
+      <p>Developer building minimal, modern, dark-themed experiences.</p>
+      <a href="#projects" class="cta">View Projects</a>
+    </section>
+
+    <section id="about" class="section reveal">
+      <h2>About Me</h2>
+      <p>I craft performant web interfaces with a focus on usability and polish. This site uses a dark, modern theme with subtle motions and highlights.</p>
+    </section>
+
+    <section id="skills" class="section reveal">
+      <h2>Skills</h2>
+      <ul class="tags skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>UI/UX</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <h2>Projects</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Dynamic To-Do List App</h3>
+          <p>Add, delete, and manage tasks with smooth animations.</p>
+          <a class="btn" href="#">Open</a>
+        </article>
+        <article class="card">
+          <h3>Weather Dashboard</h3>
+          <p>Displays static weather info with animated cards.</p>
+          <a class="btn" href="#">Open</a>
+        </article>
+        <article class="card">
+          <h3>Animated Quiz App</h3>
+          <p>Multiple-choice quiz with score tracking and transitions.</p>
+          <a class="btn" href="#">Open</a>
+        </article>
+        <article class="card">
+          <h3>Image Gallery with Filters</h3>
+          <p>Filterable image grid with hover effects.</p>
+          <a class="btn" href="#">Open</a>
+        </article>
+        <article class="card">
+          <h3>Sticky Notes App</h3>
+          <p>Create, drag, and delete colorful sticky notes.</p>
+          <a class="btn" href="#">Open</a>
+        </article>
+        <article class="card">
+          <h3>Animated Navigation Menu</h3>
+          <p>Responsive nav with slide-in effects and sub-menus.</p>
+          <a class="btn" href="#">Open</a>
+        </article>
+        <article class="card">
+          <h3>Digital Clock with Theme Toggle</h3>
+          <p>Real-time digital clock with light/dark mode.</p>
+          <a class="btn" href="#">Open</a>
+        </article>
+        <article class="card">
+          <h3>Interactive Pricing Slider</h3>
+          <p>Select plans with dynamic pricing updates.</p>
+          <a class="btn" href="#">Open</a>
+        </article>
+        <article class="card">
+          <h3>Animated Card Flip Game</h3>
+          <p>Memory card game with flip animations.</p>
+          <a class="btn" href="#">Open</a>
+        </article>
+        <article class="card">
+          <h3>Music Player UI</h3>
+          <p>Play, pause, and navigate songs with animated progress bar.</p>
+          <a class="btn" href="#">Open</a>
+        </article>
+        <article class="card">
+          <h3>FAQ Accordion</h3>
+          <p>Clickable FAQ section with sliding answers.</p>
+          <a class="btn" href="#">Open</a>
+        </article>
+        <article class="card">
+          <h3>Animated Login Form</h3>
+          <p>Focus-glow inputs and animated submit effects.</p>
+          <a class="btn" href="#">Open</a>
+        </article>
+        <article class="card">
+          <h3>Interactive Product Showcase</h3>
+          <p>Product cards with hover zoom and slide-in details.</p>
+          <a class="btn" href="#">Open</a>
+        </article>
+        <article class="card">
+          <h3>Event Countdown Timer</h3>
+          <p>Countdown to events with animated digits.</p>
+          <a class="btn" href="#">Open</a>
+        </article>
+        <article class="card">
+          <h3>Interactive Testimonial Slider</h3>
+          <p>Slideable testimonials with next/prev buttons.</p>
+          <a class="btn" href="#">Open</a>
+        </article>
+        <article class="card">
+          <h3>Animated Progress Circle</h3>
+          <p>Circular skill/task progress bars with animation.</p>
+          <a class="btn" href="#">Open</a>
+        </article>
+        <article class="card">
+          <h3>Typewriter Effect Text</h3>
+          <p>Animated typewriter heading or tagline.</p>
+          <a class="btn" href="#">Open</a>
+        </article>
+        <article class="card">
+          <h3>Drag-and-Drop Kanban Board</h3>
+          <p>Column-based task board with drag-and-drop.</p>
+          <a class="btn" href="#">Open</a>
+        </article>
+        <article class="card">
+          <h3>Parallax Scrolling Website</h3>
+          <p>Single-page site with layered parallax effects.</p>
+          <a class="btn" href="#">Open</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="resume" class="section reveal center-text">
+      <h2>Resume</h2>
+      <p>Want to know more about my experience? Download my resume or connect with me directly.</p>
+      <button class="btn large" id="resumeDownload">Hire Me</button>
+    </section>
+
+    <section id="contact" class="section reveal center-text">
+      <h2>Contact</h2>
+      <form class="form" onsubmit="event.preventDefault();alert('Not added yet');">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Message" rows="4" required></textarea>
+        <button type="submit" class="btn large">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>© 2025 Satvik Hemant Gupta. All rights reserved.</p>
+  </footer>
+
+  <button id="topBtn" class="top-btn">↑ Top</button>
+  <script src="script.js"></script>
+</body>
+</html>

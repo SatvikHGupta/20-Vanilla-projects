@@ -1,0 +1,82 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  background-color: black;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: black;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 30px;
+  width: 500px;
+  box-shadow: 2px 4px 6px 8px darkgray;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid darkgray;
+  border-radius: 6px;
+  background-color: #1a1a1a;
+  color: whitesmoke;
+}
+
+input::placeholder {
+  color: gray;
+}
+
+button {
+  padding: 10px 16px;
+  background-color: lightgray;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.5s;
+}
+
+button:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.typewriter-text {
+  font-weight: 500;
+  color: whitesmoke;
+  min-height: 30px;
+  margin-top: 20px;
+  letter-spacing: 1px;
+  text-shadow: 0 5px 10px lightgray;
+}
+
+#textOutput::after {
+  content: '|';
+  animation: blink 1s infinite;
+  color: lightgray;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}

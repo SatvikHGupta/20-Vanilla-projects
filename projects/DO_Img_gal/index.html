@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtered Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="toolbar" role="banner">
+      <div class="brand">
+        <h1 class="title">Gallery</h1>
+        <p class="tagline">Filter by category — responsive and animated</p>
+      </div>
+      <div class="controls" role="toolbar" aria-label="Gallery controls">
+        <div class="filters" role="group" aria-label="Filter images">
+          <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="nature">Nature</button>
+          <button class="filter-btn" data-filter="city">City</button>
+          <button class="filter-btn" data-filter="people">People</button>
+          <button class="filter-btn" data-filter="animals">Animals</button>
+          <button class="filter-btn" data-filter="architecture">Architecture</button>
+        </div>
+        <div class="actions">
+          <button id="resetBtn" class="ghost">Reset</button>
+          <button id="themeToggle" class="ghost" aria-pressed="false">Light</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="gallery-wrap" id="galleryWrap">
+      <section id="gallery" class="gallery" aria-live="polite" aria-label="Image gallery"></section>
+    </main>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+      <button id="lbClose" class="lb-close" aria-label="Close viewer">×</button>
+      <button id="lbPrev" class="lb-nav lb-prev" aria-label="Previous image">‹</button>
+      <figure class="lb-content">
+        <img id="lbImage" src="" alt="">
+        <figcaption id="lbCaption" class="lb-caption"></figcaption>
+      </figure>
+      <button id="lbNext" class="lb-nav lb-next" aria-label="Next image">›</button>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

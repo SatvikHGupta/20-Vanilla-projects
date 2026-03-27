@@ -1,0 +1,76 @@
+:root {
+  --bg-color: #121212;
+  --card-color: #1e1e1e;
+  --accent-color: #f5df4d;
+  --text-color: #ffffff;
+  --transition-speed: 0.3s;
+  --max-width: 600px;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+.faq {
+  width: 100%;
+  max-width: var(--max-width);
+}
+
+.faq-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.faq-item + .faq-item {
+  margin-top: 1rem;
+}
+
+.question {
+  width: 100%;
+  text-align: left;
+  background-color: var(--accent-color);
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.question:hover,
+.question:focus {
+  background-color: #ffe95c;
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  background-color: var(--card-color);
+  color: var(--text-color);
+  border-radius: 0 0 var(--radius) var(--radius);
+  transition: max-height var(--transition-speed) ease, padding var(--transition-speed) ease;
+  padding: 0 1rem;
+}
+
+.answer.open {
+  max-height: 200px;
+  padding: 1rem;
+}

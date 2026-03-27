@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Animated Navigation Menu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="logo" href="#">SHG</a>
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mobileNav">
+        <svg class="icon icon-hamburger" viewBox="0 0 24 24" width="28" height="28">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <nav id="mobileNav" class="nav-menu" aria-hidden="true">
+    <div class="menu-header">
+      <span class="menu-logo">SHG</span>
+      <button id="closeNav" class="close-btn" aria-label="Close navigation">
+        <svg viewBox="0 0 24 24" width="28" height="28">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </button>
+    </div>
+    <ul class="menu">
+      <li class="menu-item"><a href="#">Home</a></li>
+      <li class="menu-item"><a href="#">Services</a></li>
+      <li class="menu-item"><a href="#">Products</a></li>
+      <li class="menu-item"><a href="#">About</a></li>
+      <li class="menu-item"><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div id="navOverlay" class="nav-overlay"></div>
+
+  <main id="main" class="page-content">
+    <section class="hero">
+      <h1>Build fast, accessible navigation</h1>
+      <p>Responsive animated navigation with smooth right-to-left slide-in.</p>
+    </section>
+    <section class="demo-cards">
+      <article class="card">Demo card 1</article>
+      <article class="card">Demo card 2</article>
+      <article class="card">Demo card 3</article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
